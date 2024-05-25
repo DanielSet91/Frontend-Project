@@ -1,0 +1,10 @@
+.tablebox {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column-reverse;
+  justify-content: space-evenly;
+}
+.td {
+  color: white;
+}

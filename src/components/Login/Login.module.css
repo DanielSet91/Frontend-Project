@@ -1,0 +1,13 @@
+.welcome {
+  margin-top: 20px;
+  font-size: 25px;
+  color: rgb(219, 216, 216);
+}
+.signOut {
+  margin-top: 20px;
+}
+.divWelcome {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
