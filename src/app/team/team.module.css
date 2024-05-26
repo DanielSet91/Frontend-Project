@@ -1,0 +1,15 @@
+.pageContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+.teamsHeader{
+    font-size: 33px;
+}
+.teamHeader{
+    font-size: 25px;
+}
+.markColor {
+    color: rgb(15, 134, 11);
+  }

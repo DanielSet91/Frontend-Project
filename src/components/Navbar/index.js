@@ -2,6 +2,8 @@
 import styles from "./Navbar.module.css";
 import Link from "next/link";
 import { useSession, signOut } from "next-auth/react";
+import '../../styles/global.css'
+import { Button } from "@chakra-ui/react";
 
 export default function Navbar() {
   const { data: session } = useSession();
@@ -36,9 +38,9 @@ export default function Navbar() {
           })}
         </div>
         <div className="logout-container">
-          <button className={styles.navLink} onClick={signOut}>
+          <Button colorScheme="blue" className={styles.navLink} onClick={signOut}>
             Logout
-          </button>
+          </Button>
         </div>
       </nav>
     );

@@ -4,11 +4,11 @@ import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { Box, Flex, Text } from "@chakra-ui/react";
-import {Table, Thead, Tbody, Tfoot,Tr,Th,Td,TableCaption,TableContainer,} from "@chakra-ui/react";
+import {Table, Thead, Tbody, Tfoot,Tr,Th,Td,TableContainer,} from "@chakra-ui/react";
 import { LineChart, XAxis, YAxis, Line, Tooltip, Legend } from "recharts";
 import styles from "./dashboard.module.css";
 import sales from '../data/sales.json';
-import globalStyles from '../../styles/index.module.css'
+import '../../styles/global.css'
 
 export default function Dashboard() {
   const { data: session, status } = useSession();
@@ -29,19 +29,16 @@ export default function Dashboard() {
   return (
     <>
       <Navbar />
-
-      <main>
-        <h1>Welcome to the Dashboard, {session.user.name}</h1>
-      </main>
+      <div className={styles.container}>
       <Flex flexDirection="column" alignItems="center">
         {products.map(product => {
           const filteredData = sales.filter(sale => sale.product === product);
           return (
             <Box key={product} mt={8} p={4} bg="gray.100" borderRadius="md" width="100%">
-              <Text fontSize="xl" fontWeight="bold" mb={4}>
+              <Text fontSize='40' fontWeight="bold" color="" mb={20}>
                 {product} Sales
               </Text>
-              <LineChart width={600} height={300} data={filteredData}>
+              <LineChart width={800} height={300} data={filteredData} className={styles.lineChart}>
                 <XAxis dataKey="month" />
                 <YAxis />
                 <Tooltip />
@@ -49,12 +46,12 @@ export default function Dashboard() {
                 <Line type="monotone" dataKey="revenue" stroke="#8884d8" />
                 <Line type="monotone" dataKey="quantity" stroke="#82ca9d" />
               </LineChart>
-              <TableContainer mt={4}>
-                <Table variant="simple">
-                  <TableCaption>{product} Sales Data</TableCaption>
+              <div className={styles.tableContainer}>
+              <TableContainer mt={4} style={{width: "90%"}}>
+                <Table variant="striped" className={styles.tableProduct} >
                   <Thead>
-                    <Tr>
-                      <Th>Month</Th>
+                    <Tr textAlign="left">
+                      <Th >Month</Th>
                       <Th isNumeric>Quantity</Th>
                       <Th isNumeric>Revenue</Th>
                     </Tr>
@@ -69,24 +66,21 @@ export default function Dashboard() {
                     ))}
                   </Tbody>
                   <Tfoot>
-                    <Tr>
+                    <Tr textAlign="left">
                       <Th>Month</Th>
                       <Th isNumeric>Quantity</Th>
                       <Th isNumeric>Revenue</Th>
                     </Tr>
+                    <Text size='sm'>{product} Sales</Text>
                   </Tfoot>
                 </Table>
               </TableContainer>
+              </div>
             </Box>
           );
         })}
-        <Box mt={8} p={4} bg="gray.100" borderRadius="md">
-          <Text fontSize="xl" fontWeight="bold" mb={4}>
-            Top Customers
-          </Text>
-          {/* Table component to display top customers */}
-        </Box>
       </Flex>
+      </div>
     </>
   );
 }

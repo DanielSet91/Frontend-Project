@@ -5,6 +5,30 @@
   flex-direction: column-reverse;
   justify-content: space-evenly;
 }
-.td {
-  color: white;
+.container{
+  display: flex;
+  justify-content: center;
+}
+.tableCaption{
+  margin-bottom: 10px;
+  font-size: 40px;
+  
+}
+.productText{
+  margin-bottom: 100px;
+}
+.tableProduct th, .tableProduct td, .tableProduct, .td {
+  color: #d5d9db;
+}
+.tableContainer{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5%;
+}
+.lineChart{
+  margin-bottom: 20px;
+}
+.tableProduct{
+  width:100%;
+  font-size: 19px;
 }

@@ -3,9 +3,18 @@
 import { signIn, signOut, useSession } from "next-auth/react";
 import { Button } from "@chakra-ui/react";
 import styles from "./Login.module.css";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 export default function Login() {
-  const { data: session } = useSession();
+  const { data: session, status } = useSession();
+  const router = useRouter();
+
+  const signInRedirect = () =>{
+    signIn("google");
+    router.push("/dashboard");
+  }
+
 
   if (session) {
     return (
@@ -30,7 +39,7 @@ export default function Login() {
         colorScheme="purple"
         size="lg"
         variant="solid"
-        onClick={() => signIn("google")}
+        onClick={() => signInRedirect()}
         className={styles.signOut}
       >
         Sign in with Google
