@@ -8,6 +8,7 @@
 .container{
   display: flex;
   justify-content: center;
+  background: #141436;
 }
 .tableCaption{
   margin-bottom: 10px;
@@ -31,4 +32,7 @@
 .tableProduct{
   width:100%;
   font-size: 19px;
+}
+.table{
+  background-color: #aac5eb;
 }

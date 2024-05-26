@@ -1,0 +1,71 @@
+/*!*********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/components/Login/Login.module.css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************/
+.Login_welcome__m8TD3 {
+  margin-top: 20px;
+  font-size: 25px;
+  color: rgb(219, 216, 216);
+}
+.Login_signOut__nGI2C {
+  margin-top: 20px;
+}
+.Login_divWelcome__1kbWV {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/*!***********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/components/Navbar/Navbar.module.css ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************/
+.Navbar_navbar__UMdIx {
+  display: flex;
+  padding: 1rem;
+  background: #141441;
+  color: #fff;
+  border-bottom: 1px solid rgb(179, 179, 211);
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.Navbar_navLink__WmfVb {
+  font-size: 20px;
+  color: rgb(219, 216, 216);
+}
+.Navbar_logo__PiZmU {
+  width: 32px;
+  margin-left: 20px;
+}
+
+.Navbar_linksContainer__zKzpV {
+  display: flex;
+  gap: 25px;
+}
+
+/*!*******************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/styles/global.css ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************/
+body{
+    background: #141436;
+    height: 95vh;
+    /* color: white; */
+  }
+h1, h2, h3, h4, h5, h6, p{
+    color: #dbdee0;
+}
+/*!***********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/styles/index.module.css ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************/
+.styles_main__8wAdZ {
+    background: #141436;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 95vh;
+  }
+.styles_img__dzXr7 {
+    width: 400px;
+    margin-bottom: 2rem;
+  }
+

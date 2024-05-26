@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
-import SessionWrapper from "../components/SessionWrapper";
 import { ChakraProvider } from "@chakra-ui/react";
+import SessionWrapper from "../components/SessionWrapper";
+import '../styles/global.css'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,10 +12,17 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <SessionWrapper>
-      <html lang="en">
-          <body className={inter.className}>{children}</body>
-      </html>
-    </SessionWrapper>
+    <html lang="en">
+      <head>
+        {/* Metadata can be added here if needed */}
+      </head>
+      <body className={inter.className}>
+        <ChakraProvider>
+          <SessionWrapper>
+            {children}
+          </SessionWrapper>
+        </ChakraProvider>
+      </body>
+    </html>
   );
 }

@@ -1,0 +1,52 @@
+{
+  "teams": [
+    {
+      "name": "Fast Talkers",
+      "users": [
+        { "name": "Alice", "email": "alice@example.com" },
+        { "name": "Bob", "email": "bob@example.com" },
+        { "name": "Charlie", "email": "charlie@example.com" }
+      ]
+    },
+    {
+      "name": "The Achievers",
+      "users": [
+        { "name": "David", "email": "david@example.com" },
+        { "name": "Eve", "email": "eve@example.com" },
+        { "name": "Frank", "email": "frank@example.com" }
+      ]
+    },
+    {
+      "name": "High Voltage",
+      "users": [
+        { "name": "Grace", "email": "grace@example.com" },
+        { "name": "Henry", "email": "henry@example.com" },
+        { "name": "Ivy", "email": "ivy@example.com" }
+      ]
+    },
+    {
+      "name": "Barely Managing",
+      "users": [
+        { "name": "Jack", "email": "jack@example.com" },
+        { "name": "Kelly", "email": "kelly@example.com" },
+        { "name": "Liam", "email": "liam@example.com" }
+      ]
+    },
+    {
+      "name": "Mystical Wanderers",
+      "users": [
+        { "name": "Mia", "email": "mia@example.com" },
+        { "name": "Noah", "email": "noah@example.com" },
+        { "name": "Olivia", "email": "olivia@example.com" }
+      ]
+    },
+    {
+      "name": "Miracle Workers",
+      "users": [
+        { "name": "Sophia", "email": "sophia@example.com" },
+        { "name": "Thomas", "email": "thomas@example.com" },
+        { "name": "Victoria", "email": "victoria@example.com" }
+      ]
+    }
+  ]
+}

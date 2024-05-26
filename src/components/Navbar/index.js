@@ -38,7 +38,7 @@ export default function Navbar() {
           })}
         </div>
         <div className="logout-container">
-          <Button colorScheme="blue" className={styles.navLink} onClick={signOut}>
+          <Button colorScheme="red" className={styles.navLink} onClick={signOut}>
             Logout
           </Button>
         </div>
