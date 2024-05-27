@@ -1,9 +1,10 @@
 "use client";
 
 import { signIn, signOut, useSession } from "next-auth/react";
-import { Button, Link, Spinner } from "@chakra-ui/react";
+import { Button, Link} from "@chakra-ui/react";
 import styles from "./Login.module.css";
 import { useRouter } from "next/navigation";
+import LoadingSpinner from '../../components/Loading/index'
 
 export default function Login({ isButton }) {
   const { data: session, status } = useSession();
@@ -13,21 +14,11 @@ export default function Login({ isButton }) {
     signIn("google", { callbackUrl: "/dashboard" });
   };
 
-  if (status === "loading") {
-    return (
-      <Box
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-        height="100vh"
-      >
-        <Spinner size="xl" />
-      </Box>
-    );
-  }
+
   if (session) {
     return (
       <div className={styles.divWelcome}>
+        <LoadingSpinner status={status} />
         <p className={styles.welcome}>Welcome, {session.user.name}</p>
         <Button
           colorScheme="purple"

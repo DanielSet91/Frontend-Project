@@ -18,6 +18,7 @@ import {
 import { LineChart, XAxis, YAxis, Line, Tooltip, Legend } from "recharts";
 import styles from "./dashboard.module.css";
 import sales from "../data/sales.json";
+import LoadingSpinner from "@/src/components/Loading";
 
 export default function Dashboard() {
   const { data: session, status } = useSession();
@@ -29,24 +30,13 @@ export default function Dashboard() {
     }
   }, [status, router]);
 
-  if (status === "loading") {
-    return (
-      <Box
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-        height="100vh"
-      >
-        <Spinner size="xl" />
-      </Box>
-    );
-  }
 
   const products = [...new Set(sales.map((sale) => sale.product))];
 
   return (
     <>
       <Navbar />
+      <LoadingSpinner status={status} />
       <div className={styles.container}>
         <Flex flexDirection="column" alignItems="center" width="100%">
           {products.map((product) => {

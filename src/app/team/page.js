@@ -33,6 +33,7 @@ import styles from "./team.module.css";
 import teamsData from "../data/teams.json";
 import usersData from "../data/users.json";
 import React from "react";
+import LoadingSpinner from "@/src/components/Loading";
 
 export default function Dashboard() {
   const { data: session, status } = useSession();
@@ -106,22 +107,11 @@ export default function Dashboard() {
     setTeams(filteredTeams);
   };
 
-  if (status === "loading") {
-    return (
-      <Box
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-        height="100vh"
-      >
-        <Spinner size="xl" />
-      </Box>
-    );
-  }
 
   return (
     <>
       <Navbar />
+      <LoadingSpinner status={status} />
       <div className={styles.container}>
         <div className={styles.searchButtons}>
           <Button
