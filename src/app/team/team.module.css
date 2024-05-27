@@ -41,3 +41,12 @@
 .createButton {
   margin-bottom: 20px;
 }
+.searchButtons {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.errorMessage {
+  color: red;
+}

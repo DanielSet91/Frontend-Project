@@ -552,9 +552,9 @@ globalThis.__RSC_MANIFEST["/page"] = {
           async: false,
         },
       },
-    "(app-pages-browser)/./src/components/Login/index.js": {
+    "(app-pages-browser)/./src/app/team/page.js": {
       "*": {
-        id: "(ssr)/./src/components/Login/index.js",
+        id: "(ssr)/./src/app/team/page.js",
         name: "*",
         chunks: [],
         async: false,
@@ -568,9 +568,9 @@ globalThis.__RSC_MANIFEST["/page"] = {
         async: false,
       },
     },
-    "(app-pages-browser)/./src/app/team/page.js": {
+    "(app-pages-browser)/./src/components/Login/index.js": {
       "*": {
-        id: "(ssr)/./src/app/team/page.js",
+        id: "(ssr)/./src/components/Login/index.js",
         name: "*",
         chunks: [],
         async: false,
@@ -1088,26 +1088,6 @@ globalThis.__RSC_MANIFEST["/page"] = {
         chunks: ["app-pages-internals", "static/chunks/app-pages-internals.js"],
         async: false,
       },
-    "C:\\Users\\USER\\VsCode\\MonotoringApp\\src\\components\\Login\\index.js":
-      {
-        id: "(app-pages-browser)/./src/components/Login/index.js",
-        name: "*",
-        chunks: ["app/page", "static/chunks/app/page.js"],
-        async: false,
-      },
-    "C:\\Users\\USER\\VsCode\\MonotoringApp\\src\\components\\Navbar\\index.js":
-      {
-        id: "(app-pages-browser)/./src/components/Navbar/index.js",
-        name: "*",
-        chunks: ["app/page", "static/chunks/app/page.js"],
-        async: false,
-      },
-    "C:\\Users\\USER\\VsCode\\MonotoringApp\\src\\styles\\index.module.css": {
-      id: "(app-pages-browser)/./src/styles/index.module.css",
-      name: "*",
-      chunks: ["app/page", "static/chunks/app/page.js"],
-      async: false,
-    },
     "C:\\Users\\USER\\VsCode\\MonotoringApp\\src\\app\\team\\page.js": {
       id: "(app-pages-browser)/./src/app/team/page.js",
       name: "*",
@@ -1121,6 +1101,26 @@ globalThis.__RSC_MANIFEST["/page"] = {
         chunks: [],
         async: false,
       },
+    "C:\\Users\\USER\\VsCode\\MonotoringApp\\src\\components\\Navbar\\index.js":
+      {
+        id: "(app-pages-browser)/./src/components/Navbar/index.js",
+        name: "*",
+        chunks: ["app/page", "static/chunks/app/page.js"],
+        async: false,
+      },
+    "C:\\Users\\USER\\VsCode\\MonotoringApp\\src\\components\\Login\\index.js":
+      {
+        id: "(app-pages-browser)/./src/components/Login/index.js",
+        name: "*",
+        chunks: ["app/page", "static/chunks/app/page.js"],
+        async: false,
+      },
+    "C:\\Users\\USER\\VsCode\\MonotoringApp\\src\\styles\\index.module.css": {
+      id: "(app-pages-browser)/./src/styles/index.module.css",
+      name: "*",
+      chunks: ["app/page", "static/chunks/app/page.js"],
+      async: false,
+    },
   },
   entryCSSFiles: {
     "C:\\Users\\USER\\VsCode\\MonotoringApp\\src\\": [],

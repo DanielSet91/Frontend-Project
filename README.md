@@ -2,7 +2,7 @@
 
 ## Description
 
-This project is a web application built with Next.js, Chakra UI, and Redux. It provides functionalities for user authentication using Google, with pages for the dashboard and team management. The project also includes components such as Navbar and Login.
+This project is a web application built with Next.js, and Chakra UI. It provides functionalities for user authentication using Google, with pages for the dashboard and team management. The project also includes components such as Navbar, sessionwrapper and Login.
 
 ## Project Setup
 
@@ -11,7 +11,6 @@ This project is a web application built with Next.js, Chakra UI, and Redux. It p
 - **Node.js:** Ensure you have Node.js installed on your machine.
 - **Next.js:** Install Next.js globally or as a project dependency.
 - **Chakra UI:** Install Chakra UI for styling and UI components.
-- **Redux:** Install Redux for state management.
 
 To install project dependencies, run:
 
@@ -40,10 +39,6 @@ The project follows a modular and organized code structure:
 - **components/:** Contains reusable UI components used across the application.
   - `Navbar.js`: Navbar component for navigation.
   - `Login.js`: Login component for authentication.
-- **redux/:** Contains Redux store configuration and related files.
-  - **actions/:** Action creators for Redux actions.
-  - **reducers/:** Reducers to manage different parts of the application state.
-  - `store.js`: Redux store configuration.
 - **styles/:** Contains global styles or CSS modules used across the application.
 - **public/:** Contains static assets such as images or fonts.
 

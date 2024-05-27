@@ -8,7 +8,7 @@ export default function Page() {
   return (
     <>
       <Navbar />
-      <main className={styles.main}>
+      <main className={styles.mainContainer}>
         <Heading as="h1" size="4xl" fontFamily="serif">
           Fox Insights
         </Heading>

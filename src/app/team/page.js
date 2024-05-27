@@ -43,6 +43,7 @@ export default function Dashboard() {
   const [filteredUsers, setFilteredUsers] = useState([]);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
+  const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
     if (status === "unauthenticated") {
@@ -82,6 +83,16 @@ export default function Dashboard() {
 
   const handleCreateGroup = () => {
     const selectedUsers = filteredUsers.filter((user) => user.selected);
+    if (selectedUsers.length === 0) {
+      setErrorMessage(
+        "Error: Must have at least one user to create a new team",
+      );
+      return;
+    }
+    if (newGroupName.length === 0) {
+      setErrorMessage("Error: Team must have a name");
+      return;
+    }
     const newTeam = { name: newGroupName, users: selectedUsers };
     setTeams([...teams, newTeam]);
     onClose();
@@ -112,15 +123,23 @@ export default function Dashboard() {
     <>
       <Navbar />
       <div className={styles.container}>
-        <Button
-          ref={btnRef}
-          colorScheme="teal"
-          onClick={onOpen}
-          className={styles.createButton}
-        >
-          Create New Group
-        </Button>
-
+        <div className={styles.searchButtons}>
+          <Button
+            ref={btnRef}
+            colorScheme="teal"
+            onClick={onOpen}
+            className={styles.createButton}
+          >
+            Create New team
+          </Button>
+          <Input
+            color="white"
+            size="md"
+            width="50"
+            placeholder="Search Team"
+            onChange={(e) => handleSearchTeam(e.target.value)}
+          />
+        </div>
         <Accordion allowMultiple className={styles.accordion}>
           {teams.map((team) => (
             <AccordionItem
@@ -184,7 +203,7 @@ export default function Dashboard() {
           <DrawerOverlay />
           <DrawerContent>
             <DrawerCloseButton />
-            <DrawerHeader>Create a new group</DrawerHeader>
+            <DrawerHeader>Create a new team</DrawerHeader>
 
             <DrawerBody>
               <Input
@@ -199,6 +218,9 @@ export default function Dashboard() {
                 onChange={handleSearch}
                 mb={4}
               />
+              {errorMessage && (
+                <p className={styles.errorMessage}>{errorMessage}</p>
+              )}
               <Table variant="simple">
                 <Thead>
                   <Tr>
@@ -223,7 +245,6 @@ export default function Dashboard() {
                 </Tbody>
               </Table>
             </DrawerBody>
-
             <DrawerFooter>
               <Button variant="outline" mr={3} onClick={onClose}>
                 Cancel
@@ -234,13 +255,6 @@ export default function Dashboard() {
             </DrawerFooter>
           </DrawerContent>
         </Drawer>
-        <Input
-          color="white"
-          size="md"
-          width="50"
-          placeholder="Search Team"
-          onChange={(e) => handleSearchTeam(e.target.value)}
-        />
       </div>
     </>
   );
