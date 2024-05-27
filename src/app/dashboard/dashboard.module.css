@@ -5,34 +5,36 @@
   flex-direction: column-reverse;
   justify-content: space-evenly;
 }
-.container{
+.container {
   display: flex;
   justify-content: center;
   background: #141436;
 }
-.tableCaption{
+.tableCaption {
   margin-bottom: 10px;
   font-size: 40px;
-  
 }
-.productText{
+.productText {
   margin-bottom: 100px;
 }
-.tableProduct th, .tableProduct td, .tableProduct, .td {
+.tableProduct th,
+.tableProduct td,
+.tableProduct,
+.td {
   color: #d5d9db;
 }
-.tableContainer{
+.tableContainer {
   display: flex;
   justify-content: center;
   margin-bottom: 5%;
 }
-.lineChart{
+.lineChart {
   margin-bottom: 20px;
 }
-.tableProduct{
-  width:100%;
+.tableProduct {
+  width: 100%;
   font-size: 19px;
 }
-.table{
+.table {
   background-color: #aac5eb;
 }

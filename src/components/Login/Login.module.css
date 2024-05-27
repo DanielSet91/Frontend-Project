@@ -11,3 +11,11 @@
   justify-content: center;
   flex-direction: column;
 }
+.signInLink {
+  font-size: 20px;
+  color: rgb(219, 216, 216);
+}
+
+.signInLink:hover {
+  text-decoration: none;
+}

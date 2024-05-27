@@ -1,7 +1,7 @@
 import Login from "../components/Login";
 import styles from "../styles/index.module.css";
 import Navbar from "../components/Navbar";
-import '../styles/global.css'
+import "../styles/global.css";
 import { Heading, Image } from "@chakra-ui/react";
 
 export default function Page() {
@@ -9,11 +9,11 @@ export default function Page() {
     <>
       <Navbar />
       <main className={styles.main}>
-        <Heading as='h1' size='4xl' noOfLines={1}>
+        <Heading as="h1" size="4xl" fontFamily="serif">
           Fox Insights
         </Heading>
         <Image className={styles.img} src="/logo.png" alt="Logo" />
-        <Login />
+        <Login isButton />
       </main>
     </>
   );

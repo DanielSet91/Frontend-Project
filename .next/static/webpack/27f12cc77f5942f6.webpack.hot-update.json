@@ -1,0 +1,11 @@
+{
+  "c": ["app/team/page", "webpack"],
+  "r": [],
+  "m": [
+    "(app-pages-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-client-entry-loader.js?modules=%7B%22request%22%3A%22C%3A%5C%5CUsers%5C%5CUSER%5C%5CVsCode%5C%5CMonotoringApp%5C%5Csrc%5C%5Capp%5C%5Cteam%5C%5Cpage.js%22%2C%22ids%22%3A%5B%5D%7D&server=false!",
+    "(app-pages-browser)/./src/app/data/teams.json",
+    "(app-pages-browser)/./src/app/data/users.json",
+    "(app-pages-browser)/./src/app/team/page.js",
+    "(app-pages-browser)/./src/app/team/team.module.css"
+  ]
+}

@@ -1,9 +1,11 @@
 "use client";
+
 import styles from "./Navbar.module.css";
 import Link from "next/link";
 import { useSession, signOut } from "next-auth/react";
-import '../../styles/global.css'
-import { Button } from "@chakra-ui/react";
+import "../../styles/global.css";
+import { Button, Image } from "@chakra-ui/react";
+import Login from "../Login";
 
 export default function Navbar() {
   const { data: session } = useSession();
@@ -26,9 +28,9 @@ export default function Navbar() {
     return (
       <nav className={styles.navbar}>
         <div className={styles.linksContainer}>
-          <a href="/">
-            <img src="/logo.png" alt="Logo" className={styles.logo} />
-          </a>
+          <Link href="/">
+            <Image src="/logo.png" alt="Logo" className={styles.logo} />
+          </Link>
           {links.map((link, index) => {
             return (
               <Link key={index} href={link.url} className={styles.navLink}>
@@ -38,7 +40,11 @@ export default function Navbar() {
           })}
         </div>
         <div className="logout-container">
-          <Button colorScheme="red" className={styles.navLink} onClick={signOut}>
+          <Button
+            colorScheme="red"
+            className={styles.navLink}
+            onClick={signOut}
+          >
             Logout
           </Button>
         </div>
@@ -48,13 +54,11 @@ export default function Navbar() {
     return (
       <nav className={styles.navbar}>
         <div className={styles.linksContainer}>
-        <a href="/">
-            <img src="/logo.png" alt="Logo" className={styles.logo} />
-          </a>
-          <Link href="/login" className={styles.navLink}>
-            Login
+          <Link href="/">
+            <Image src="/logo.png" alt="Logo" className={styles.logo} />
           </Link>
-      </div>
+          <Login />
+        </div>
       </nav>
     );
   }
