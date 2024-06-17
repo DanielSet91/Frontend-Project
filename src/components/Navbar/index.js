@@ -6,9 +6,39 @@ import { useSession, signOut } from "next-auth/react";
 import "../../styles/global.css";
 import { Button, Image } from "@chakra-ui/react";
 import Login from "../Login";
+import { useSelector, useDispatch } from "react-redux";
+import { selectIsAuthenticated, login, logout } from "@/src/app/redux/features/authSlice";
+import { useEffect, useState } from "react";
+
+// return (
+//   <nav className={styles.navbar}>
+//     <div className={styles.linksContainer}>
+//       <Link href="/">
+//         <Image src="/logo.png" alt="Logo" className={styles.logo} />
+//       </Link>
+//       <Login />
+//     </div>
+//   </nav>
+// );
 
 export default function Navbar() {
   const { data: session } = useSession();
+  const isAuthenticated = useSelector(selectIsAuthenticated);
+  const dispatch = useDispatch();
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() =>{
+    setMounted(true);
+  }, [])
+  
+  useEffect(() => {
+    if (session) {
+      dispatch(login(session.user));
+    } else {
+      dispatch(logout());
+    }
+  }, [session, dispatch]);
+
   const links = [
     {
       name: "dashboard",
@@ -24,7 +54,11 @@ export default function Navbar() {
     },
   ];
 
-  if (session) {
+  if (!mounted) {
+    return null; // Render nothing until the client has mounted
+  }
+
+  if (isAuthenticated) {
     return (
       <nav className={styles.navbar}>
         <div className={styles.linksContainer}>

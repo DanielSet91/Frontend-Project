@@ -30,7 +30,6 @@ export default function Dashboard() {
     }
   }, [status, router]);
 
-
   const products = [...new Set(sales.map((sale) => sale.product))];
 
   return (

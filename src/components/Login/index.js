@@ -1,19 +1,16 @@
 "use client";
 
 import { signIn, signOut, useSession } from "next-auth/react";
-import { Button, Link} from "@chakra-ui/react";
+import { Button, Link } from "@chakra-ui/react";
 import styles from "./Login.module.css";
-import { useRouter } from "next/navigation";
-import LoadingSpinner from '../../components/Loading/index'
+import LoadingSpinner from "../../components/Loading/index";
 
 export default function Login({ isButton }) {
   const { data: session, status } = useSession();
-  const router = useRouter();
 
   const signInRedirect = () => {
     signIn("google", { callbackUrl: "/dashboard" });
   };
-
 
   if (session) {
     return (

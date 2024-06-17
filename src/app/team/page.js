@@ -107,7 +107,6 @@ export default function Dashboard() {
     setTeams(filteredTeams);
   };
 
-
   return (
     <>
       <Navbar />
